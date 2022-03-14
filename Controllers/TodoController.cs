@@ -6,7 +6,7 @@ namespace MiniTodo.Controllers
 {
     public static class TodoController
     {
-        public static void TodosMethods(WebApplication app)
+        public static void MapTodosMethods(WebApplication app)
         {
             app.MapGet("/v1/todos", (DbAppContext context) =>
             {

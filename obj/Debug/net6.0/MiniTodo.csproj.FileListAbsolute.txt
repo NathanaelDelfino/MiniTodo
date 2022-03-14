@@ -48,3 +48,8 @@
 /Users/nathanaeldelfino/_dev/CSharp/MiniTodo/obj/Debug/net6.0/MiniTodo.genruntimeconfig.cache
 /Users/nathanaeldelfino/_dev/CSharp/MiniTodo/obj/Debug/net6.0/refint/MiniTodo.dll
 /Users/nathanaeldelfino/_dev/CSharp/MiniTodo/bin/Debug/net6.0/Flunt.dll
+/Users/nathanaeldelfino/_dev/CSharp/MiniTodo/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/Users/nathanaeldelfino/_dev/CSharp/MiniTodo/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/nathanaeldelfino/_dev/CSharp/MiniTodo/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/nathanaeldelfino/_dev/CSharp/MiniTodo/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/nathanaeldelfino/_dev/CSharp/MiniTodo/obj/Debug/net6.0/MiniTodo.MvcApplicationPartsAssemblyInfo.cs
