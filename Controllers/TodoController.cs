@@ -8,13 +8,18 @@ namespace MiniTodo.Controllers
     {
         public static void TodosMethods(WebApplication app)
         {
+            app.MapGet("/v1/todos", (DbAppContext context) =>
+            {
+                var todos = context.Todos;
+                return todos is not null ? Results.Ok(todos) : Results.NotFound();
+            });
             app.MapGet("/v1/todos/{id:int}", (DbAppContext context, int id) =>
             {
                 var todo = context.Todos.Where(x => x.Id == id);
                 return todo is not null ? Results.Ok(todo) : Results.NotFound();
             });
-
-            app.MapPost("/v1/todos", (DbAppContext context, CreateTodoViewModel model) =>
+            app.MapPost("/v1/todos", (DbAppContext context,
+                                      CreateTodoViewModel model) =>
             {
                 var viewmodel = model.MapTo();
                 if (!model.IsValid)
@@ -25,7 +30,6 @@ namespace MiniTodo.Controllers
                 context.SaveChanges();
                 return Results.Created($"/v1/todos/{context.Todos.Max(x => x.Id)}", todo);
             });
-
             app.MapPost("/v1/todos/{id:int}", (DbAppContext context,
                                                UpdateTodoViewModel model,
                                                int id) =>
