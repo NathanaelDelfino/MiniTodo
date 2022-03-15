@@ -7,7 +7,7 @@ namespace MiniTodo.Models
         public Todo(int id, bool done)
         {
             Id = id;
-            done = done;
+            Done = done;
         }
 
         public Todo(int id, string title, bool done)
@@ -18,9 +18,10 @@ namespace MiniTodo.Models
 
         }
         public int Id { get; private set; }
-        public string Title { get; private set; }
+        public string Title { get; private set; } = "";
         public bool Done { get; private set; } = false;
 
         public void AsFinished(bool done) => Done = done;
+        public void UpdateTitle(string title) => Title = title;
     }
 }
